@@ -1,0 +1,60 @@
+<html ng-app="app">
+    <head>
+        <link href="css/style.css" rel="stylesheet">
+        <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+        
+        <!--removeIf(production)-->
+        <!-- these stylsheets are included in the dist/style.css -> gulpfile.js --> 
+        <link rel="stylesheet" href="bower_components/angular-material/angular-material.css">
+        <!--endRemoveIf(production)-->
+        
+        <script src="http://code.jquery.com/jquery-2.2.2.min.js"   integrity="sha256-36cp2Co+/62rEAAYHLmRCPIych47CvdM+uTBJwSzWjI="   crossorigin="anonymous"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+      
+        
+        <!-- build:js js/angular.min.js -->
+        <script src="bower_components/angular/angular.js"></script>
+         
+        <!-- angular materials with dependencies -->
+        <script src="bower_components/angular-aria/angular-aria.js"></script>
+        <script src="bower_components/angular-animate/angular-animate.js"></script>
+        <script src="bower_components/angular-material/angular-material.js"></script>
+        
+        <!-- basic plugins -->
+        <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+        <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+        <!-- endbuild -->
+        
+        <!-- build:js js/app.js -->
+        <script src="js/app.js"></script>
+        <script src="js/controllers.js"></script>
+        <script src="js/services.js"></script>
+        <script src="js/directives.js"></script>
+        <!-- endbuild -->
+    </head>
+    <body>
+        
+        <nav class="navbar navbar-inverse" role="navigation">
+            <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" ui-sref="home">Angular Seed</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li><a ui-sref="home">home</a></li>
+            </ul>
+            </div>
+        </nav>
+        <div class="container">
+             <div class="header">Angular Seed</div>
+            <div ui-view></div>
+        </div>
+        <div class="navbar navbar-inverse navbar-fixed-bottom">
+            <div class="container">
+                <div class="navbar-header">
+                    <p class="navbar-text">&copy; 2016 MyAngularSeed</p>
+                    <a class="navbar-brand" ui-sref="about">about</a>
+                </div>
+            </div>
+        </div>    
+    </body>
+</html>
