@@ -2,14 +2,29 @@
 
 _This repository is an angular seed I put together since I often had some sort of trouble using someone else's. Use at your own risk._
 
-Basic feature list:
+**Basic feature list:**
 
  * basic angular project structure, very similar to the structure of an ionic app  
  * gulp file setup to do various tasks
  * Sass is setup
  * angular-material included
 
-In order to use gulp commands start command prompt or terminal in the root folder of the project. Following gulp tasks can be called:
+**Prerequisites:**
+ 1. This seed uses both package managers [**npm**](https://nodejs.org/en/) and [**bower**](https://bower.io/). You will need to have both of them installed globally in order to use this seed.
+ 2. For task building and running this seed uses [**gulp**](http://gulpjs.com/). Gulp also needs to be installed globally.
+ 3. Once the package managers and gulp are installed download or clone this git repository.
+ 4. In the root folder (MyAngularSeed) start command prompt (Windows) or terminal (MacOS) and run following commands (this might take a while): 
+ 
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;```bower install``` 
+ 
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;and
+ 
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;```npm install```
+
+
+**Gulp tasks:**
+
+Open command prompt or terminal and navigate to the root folder of the project (the folder containing gulpfile.j&#8203;s, bower.json and package.json).
 
 | Gulp task | Description |
 | --- | --- |
