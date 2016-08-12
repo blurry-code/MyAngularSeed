@@ -23,7 +23,7 @@ angular.module('app',['ui.router','app.controllers','app.services','app.directiv
 });
 angular.module('app.controllers',[])
 .controller('MainController', function($scope){
-   
+   alert("teste");
 });
 angular.module('app.services',[])
 .factory("myService",function(){

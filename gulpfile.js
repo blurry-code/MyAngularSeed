@@ -12,6 +12,7 @@ var concat = require('gulp-concat');
 var gulpIf = require('gulp-if');
 var gutil = require('gulp-util');
 var removeCode = require('gulp-remove-code');
+var del = require('del');
 
 // variables
 
@@ -138,7 +139,7 @@ gulp.task('default', ['styles', 'html'],function () {
 var sassdocOptions = {
     dest: './public/sassdoc'
 };
-gulp.task('sassdoc', function () {
+gulp.task('sassdoc',  function () {
   gulp
     .src('sass/**/*.scss')
     .pipe(sassdoc(sassdocOptions))
@@ -151,20 +152,25 @@ var filesToMove = [
     './locales/**/*.*',
     './templates/**/*.*'
 ];
-gulp.task('move',[], function(){
+gulp.task('move', function(){
   // the base option sets the relative root for the set of files,
   // preserving the folder structure
   gulp.src(filesToMove, { base: './' })
   .pipe(gulp.dest('dist'));
 });
 
+// delete dist folder
+gulp.task('clean', function (cb) {
+  del.sync('dist/**/*');
+    cb();
+});
 
 // parse sass and combine all css
 var cssToConcat = [
     './bower_components/angular-material/angular-material.css',
     'css/*.css'
 ];
-gulp.task('diststyles', ['sassdoc'], function(){
+gulp.task('diststyles', ['sassdoc', 'clean'], function(){
     // parse sass to compressed css, move to css folder
     gulp
         .src('sass/**/*.scss')
@@ -182,7 +188,8 @@ gulp.task('diststyles', ['sassdoc'], function(){
 // dist task that puts it all together
 // useref combines all the js files
 // removeCode removes specified <link /> tags
-gulp.task('dist', ['diststyles','move'],function(){    
+gulp.task('dist', ['diststyles','move'],function(){   
+   
    gulp.src('*.html')
     .pipe(useref())
     .pipe(removeCode({ production: true }))

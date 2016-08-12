@@ -1,6 +1,6 @@
 # MyAngularSeed
 
-_This repository is an angular seed I put together since I often had some sort of trouble using someone else's. Use at your own risk._
+_This repository is an angular 1.x seed I put together since I often had some sort of trouble using someone else's. Use at your own risk._
 
 **Basic feature list:**
 
@@ -30,3 +30,7 @@ Open command prompt or terminal and navigate to the root folder of the project (
 | --- | --- |
 | `gulp` | Parses sass to css and starts local server with livereload. |
 | `gulp dist` | Parses sass, combines all css and js (libraries and app-relevant js seperate) and moves all relevant folders to '/dist'  |
+
+**Base Template**
+
+For use-cases where angular and all is an absolute overkill there is now a base template provided. It just got a few basic pages with a bootstrap header, footer and content area. There are also a couple example sub-pages.
