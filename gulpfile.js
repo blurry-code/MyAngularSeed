@@ -150,7 +150,8 @@ gulp.task('sassdoc',  function () {
 var filesToMove = [
     './img/**/*.*',
     './locales/**/*.*',
-    './templates/**/*.*'
+    './templates/**/*.*',
+    './modules/**/*.*'
 ];
 gulp.task('move', function(){
   // the base option sets the relative root for the set of files,
@@ -168,7 +169,8 @@ gulp.task('clean', function (cb) {
 // parse sass and combine all css
 var cssToConcat = [
     './bower_components/angular-material/angular-material.css',
-    'css/*.css'
+    'css/*.css',
+    './css/bootstrap.min.css'
 ];
 gulp.task('diststyles', ['sassdoc', 'clean'], function(){
     // parse sass to compressed css, move to css folder
