@@ -169,8 +169,7 @@ gulp.task('clean', function (cb) {
 // parse sass and combine all css
 var cssToConcat = [
     './bower_components/angular-material/angular-material.css',
-    'css/*.css',
-    './css/bootstrap.min.css'
+    'css/*.css'
 ];
 gulp.task('diststyles', ['sassdoc', 'clean'], function(){
     // parse sass to compressed css, move to css folder
