@@ -1,3 +1,14 @@
+@import "partials/bulletin";
+
+// prevents .container-elements to jump when the scrollbar (dis-)appears
+// might cause problems with positioning of nested elements 
+html, body {
+    position: fixed;
+    width:100vw;
+    height:100vh;
+    overflow-x: hidden;
+}
+
 .main {
     padding:56px 0; //starts at the edge of the header 
     padding-top: 86px; // gives an extra 30px space beneath the header

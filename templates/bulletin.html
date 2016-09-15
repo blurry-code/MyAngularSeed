@@ -1,0 +1,23 @@
+<div id="bulletin">
+    <h3>News</h3>
+    <p>This is a news section. Many thanks to <i>Death to the Stockphoto</i> for the images. <br />This grid scales down to two and to one column depending on the screen size. More information on that in <code>sass/partials/_bulletin.scss</code>. The inline styles are bugs in bootstrap 4 yet to be fixed.</p>
+    <p>The structure of the data, where it is retrieved from, etc. is an arbitrary example and might not match your needs exactly.</p>
+    
+    <div class="card-columns">
+        <div class="card" ng-repeat="entry in entries" style="display:inline-block;" ng-click="cardPressed(entry)" ui-sref="bulletin_entry({content: content})">
+            <img class="card-img-top" ng-src="{{entry.image}}" style="width:100%;" />
+            <div class="card-block">
+                <h4 class="card-title">{{entry.subject}}</h4>
+                <p class="card-text">{{entry.text_short}}</p>
+                <p class="card-text">
+                    <small class="text-muted">
+                        on {{entry.date_created | date:'MM/dd/yy'}}<br />
+                        by {{entry.user_data.username}}
+                    </small>
+                </p>
+            </div> <!-- card-block end -->
+        </div> <!-- card:ng-repeat end -->
+    </div> <!-- card-columns end -->
+    
+    <p>In order to remove this page completely (with its dependencies) from this template. You will have to remove <code>templates/bulletin.html</code> and <code>templates/bulletin_entry.html</code>. In app.js you can remove the relevant states and you also can remove angular-sanitize via <code>bower uninstall --save angular-sanitize</code> with its entry in index.html and app.js.</p>
+</div> 

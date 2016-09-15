@@ -1,0 +1,11 @@
+<div id="bulletin_entry">
+    <div class="header_img" style="background-image:url(./{{entry.project.image}})"></div>
+    <h2>{{entry.project.name}}</h2>
+    <p ng-bind-html="entry.project.text"></p>
+    <hr />
+    <div class="post row" ng-class="$index%2==0 ? 'left' : 'right'" ng-repeat="p in entry.posts">
+    <img ng-src="{{p.image}}" />
+    <h3>{{p.subject}}</h3>
+    <p ng-bind-html="p.text_long"></p>
+    </div>
+</div>

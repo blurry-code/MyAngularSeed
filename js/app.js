@@ -1,9 +1,9 @@
 //'use strict';
 // 
 
-angular.module('app',['ui.router','app.controllers','app.services','app.directives','Authentication'])
+angular.module('app',['ui.router','app.controllers','app.services','app.directives','Authentication','ngSanitize'])
 .run(function($rootScope, $state){
-    $rootScope.version = "0.1.0";
+    $rootScope.version = "0.2.0";
 })
 
 .config(function (authenticationProvider) {
@@ -30,6 +30,17 @@ angular.module('app',['ui.router','app.controllers','app.services','app.directiv
         .state('about', {
             url: '/about',
             templateUrl: 'templates/about.html'
+        })
+        .state('bulletin', {
+            url: '/bulletin',
+            templateUrl: 'templates/bulletin.html',
+            controller: 'BulletinController'
+        })
+        .state('bulletin_entry', {
+            url: '/bulletin/entry',
+            templateUrl: 'templates/bulletin_entry.html',
+            controller: 'BulletinEntryController',
+            params: {content:null}
         })
         .state('history', {
             url: '/history',

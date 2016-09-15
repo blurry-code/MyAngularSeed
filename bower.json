@@ -20,7 +20,8 @@
   ],
   "dependencies": {
     "angular-ui-router": "^0.2.18",
-    "angular-material": "^1.0.9"
+    "angular-material": "^1.0.9",
+    "angular-sanitize": "^1.5.8"
   },
   "devDependencies": {
     "angular-animate": "^1.5.6",
