@@ -2,9 +2,6 @@
 
 _This repository is an angular 1.x seed I put together since I often had some sort of trouble using someone else's. Use at your own risk._
 
-**Demo:**
-[**http://angular-seed.tobias-philipp.com**](http://angular-seed.tobias-philipp.com)
-
 **Basic feature list:**
 
  * basic angular project structure, very similar to the structure of an ionic app  
